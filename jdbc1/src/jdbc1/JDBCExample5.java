@@ -39,7 +39,7 @@ public class JDBCExample5 {
 			Class.forName("oracle.jdbc.driver.OracleDriver");
 			
 			String url = "jdbc:oracle:thin:@localhost:1521:XE";
-			String userName = "KH_BDH";
+			String userName = "KH_KDH";
 			String password = "KH1234";
 			
 			conn = DriverManager.getConnection(url, userName, password);

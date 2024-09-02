@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+	<!-- 
+		driver.xml 파일 : DB 연결 정보를 작성하는 외부 파일
+	
+		entry : K, V 한 쌍을 나타내는 단위
+		<entry key="K"> V </entry>
+	 -->
+	 
+
+	<entry key="allview">
+		SELECT * FROM TB_TODO
+	</entry>
+	
+	<entry key="update">
+		INSERT INTO TB_TODO
+		VALUES (?, ?, 'X', DEFAULT, ?)
+	</entry>
+	
+	<entry key="selectCount">
+		SELECT MAX(TODO_NO)
+		FROM TB_TODO
+	</entry>
+	
+	<entry key="delete">
+		DELETE
+		FROM TB_TODO
+		WHERE TODO_NO = ?
+	</entry>
+	
+	<entry key="select">
+		SELECT * 
+		FROM TB_TODO
+		WHERE TODO_NO = ?
+	</entry>
+	
+	<entry key="complateO">
+		UPDATE TB_TODO
+		SET TODO_CHECK = 'X'
+		WHERE TODO_NO = ?
+	</entry>
+	
+	<entry key="complateX">
+		UPDATE TB_TODO
+		SET TODO_CHECK = 'O'
+		WHERE TODO_NO = ?
+	</entry>
+	
+	
+	
+	
+</properties>
